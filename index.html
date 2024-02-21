@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>FLTD</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">FLTD<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#top" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#portfolio" onclick="toggleMenu();">Portfolio</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="moon" id="top">
+        <img src="assets/bg.jpg" id="bg" alt="backgroung">
+        <img src="assets/moon.png" id="moon" alt="moon">
+        <img src="assets/mountain.png" id="mountain" alt="mountaine">
+        <img src="assets/road.png" id="road" alt="road">
+        <h2 id="text">FLTDev</h2>
+    </section>
+
+    <section class="about" id="about">
+        <div class="content">
+            <h2>photo</h2>
+            <p class="aboutp">
+              Bonjour! Je suis un développeur junior passionné de création de sites web. Je suis compétent en HTML, CSS, JavaScript, Stimulus, ainsi qu'en Ruby et Ruby on Rails. J'ai récemment obtenu mon diplôme à l'école du Wagon en développement web, où j'ai acquis des compétences solides en programmation. Bien que je sois plutôt orienté backend, j'ai une préférence pour le front-end car j'aime travailler sur l'aspect visuel des projets. Mon objectif est de continuer à développer mes compétences et de contribuer à des projets innovants dans le domaine du développement web.
+            </p>
+            <a href="#" id="btn-cv" class="btn">Obtenir mon CV</a>
+            <script>
+              function afficherCV() {
+                window.open("images/cvwagon.jpg");
+              }
+              document.getElementById("btn-cv").addEventListener("click", afficherCV);
+            </script>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="content">
+            <h2>Précédents projets</h2>
+
+        </div>
+
+
+
+    </section>
+
+    <!-- Swiper -->
+    <section class="swipperbody">
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide">
+                <a href="https://www.moon.fltd.compteweb.com/" target="_blank"><img src="images/moon.jpg"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.blue.fltd.compteweb.com/" target="_blank"><img src="images/pepsi.jpg"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.green.fltd.compteweb.com/" target="_blank"><img src="images/starbucks.jpg"></a>
+            </div>
+
+
+            <div class="swiper-slide">
+                <a href="https://www.fiasco.fltd.compteweb.com/" target="_blank"><img src="images/fiasco.jpg"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.burgercode.fltd.compteweb.com/" target="_blank"><img src="images/burgerCode.png"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.food.fltd.compteweb.com/" target="_blank"><img src="images/food.jpg"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.actrices.fltd.compteweb.com/" target="_blank"><img src="images/actrices.png"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.serpent.fltd.compteweb.com/" target="_blank"><img src="images/serpent.png"></a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://www.travelagency.fltd.compteweb.com/" target="_blank"><img src="images/travelAgency.png"></a>
+            </div>
+
+
+
+        <div class="swiper-pagination"></div>
+        </div>
+
+
+
+    </section>
+    <!-- Swiper  FIN -->
+
+
+    <!-- wave -->
+
+
+    <section class="wavesection">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
+
+    <!-- wave End-->
+
+
+
+
+
+    <!-- JSSSSSSSSSSSSSSSSSSSSS -->
+
+    <!-- nav -->
+
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 740);
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+    </script>
+
+
+    <!-- moonscroll -->
+
+
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+
+
+        })
+    </script>
+
+    <!-- Swiper  JS -->
+        <!-- JS -->
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+              },
+              loop: true,
+              autoplay: {
+              delay: 500,
+              disableOnInteraction: false,
+            }
+            });
+          </script>
+        <!-- Swiper FIN JS -->
+</body>
+</html>

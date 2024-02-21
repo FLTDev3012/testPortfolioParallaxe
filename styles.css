@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* moon */
+body
+{
+    min-height: 1500px;
+    background-color: #111;
+
+}
+.moon
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.moon:before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 10000;
+}
+.moon:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+.moon img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#text
+{
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+}
+#road
+{
+    z-index: 2;
+}
+
+
+/* finMoon */
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+p{
+    font-weight: 300;
+    color: #111;
+}
+/*header*/
+
+/* new */
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 100000;
+}
+header.sticky
+{
+    background: rgb(255, 255, 255);
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    /* zindex? */
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo{
+    color: #111;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+}
+header .navigation li
+{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+header.sticky .navigation li a{
+    color: #111;
+}
+header .navigation li a:hover{
+    color: #ff0157;
+}
+section{
+    padding: 100px;
+}
+
+/* about =  gros h2 /p/a*/
+
+
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: #0a2a43;
+}
+.about:before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #111, transparent);
+    z-index: 10000;
+}
+
+.about .content{
+    max-width: 900px;
+    text-align: center;
+}
+
+.about .content h2{
+    font-size: 5em;
+    color: #fff;
+}
+
+.about .content p{
+    font-size: 1em;
+    color: #fff;
+}
+
+.aboutp {
+  font-size: 25px !important;
+}
+
+
+.btn {
+  font-size: 1em;
+  color: #fff;
+  background: #ff0157;
+  display: inline-block;
+  padding: 20px 50px;
+  margin-top: 65px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.btn:hover
+{
+    letter-spacing: 6px;
+}
+
+/* portfolio */
+
+
+.portfolio{
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    background: #111;
+    justify-content: center;
+    padding-bottom:  0;
+
+
+}
+
+
+.portfolio .content{
+    max-width: 900px;
+    text-align: center;
+}
+
+.portfolio .content h2{
+    font-size: 5em;
+    color: #ffffff;
+    padding-top:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SWIPPER */
+.swiperbody {
+    position: relative;
+    height: 100%;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    background-color: #111;
+
+
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+
+}
+
+/* WAVE BRO */
+
+.wavesection
+{
+    position: relative;
+    width: 100%;
+    background-color: #111;
+    overflow: hidden;
+}
+section .wave
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px 100px;
+
+}
+section .wave.wave1
+{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+section .wave.wave2
+{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+section .wave.wave3
+{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+section .wave.wave4
+{
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+
+
+
+/* copyright */
+
+.copyrightText
+{
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+.copyrightText p
+{
+    color: #333;
+}
+.copyrightText a
+{
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* 1ER MEDIAQ */
+
+@media (max-width: 991px)
+{
+    header,
+    header.sticky
+    {
+        padding: 10px 20px;
+    }
+    header .navigation
+    {
+        display: none;
+    }
+    header .navigation.active
+    {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    header .navigation li
+    {
+        margin-left: 0px;
+    }
+    header .navigation li a
+    {
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle
+    {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+    }
+    .menuToggle.active
+    {
+        background: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle
+    {
+        filter: invert(1);
+    }
+    section
+    {
+        padding: 20px;
+    }
+
+}
+
+/* 2ND MEDIAQ */
+
+@media (max-width: 480px)
+{
+    .about .content h2
+    {
+        font-size: 2.2em;
+        color: #fff;
+    }
+}
